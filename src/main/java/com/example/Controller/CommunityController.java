@@ -30,7 +30,7 @@ public class CommunityController {
 
     @GetMapping(value ="/uploadboard")
     public String uploadboard() throws Exception {
-        return "community/uploadboardpage";
+        return "uploadboardpage";
     }
 
     @PostMapping(value = "/successuploadboard")
@@ -45,6 +45,6 @@ public class CommunityController {
         List<CommunityDTO> readBoard = communityDAO.readBoard(post_num);
         model.addAttribute("readBoard", readBoard);
 
-        return "community/readboard";
+        return "readboard";
     }
 }
