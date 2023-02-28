@@ -21,7 +21,7 @@ public class CommunityService {
         communityDAO.uploadboard(communityDTO);
     }
 
-    public List<CommunityDTO> readBoard(int post_num) throws Exception {
-        return communityDAO.readBoard(post_num);
+    public CommunityDTO readBoard(CommunityDTO communityDTO) throws Exception {
+        return communityDAO.readBoard(communityDTO);
     }
 }

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -41,8 +42,8 @@ public class CommunityController {
     }
 
     @GetMapping(value = "/readboard")
-    public String readBoard(Model model, int post_num) throws Exception {
-        List<CommunityDTO> readBoard = communityDAO.readBoard(post_num);
+    public String readBoard(@ModelAttribute("readBoard") CommunityDTO communityDTO, Model model, int post_num) throws Exception {
+        CommunityDTO readBoard = communityDAO.readBoard(communityDTO);
         model.addAttribute("readBoard", readBoard);
 
         return "readboard";

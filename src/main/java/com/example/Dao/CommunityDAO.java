@@ -12,6 +12,6 @@ public interface CommunityDAO {
 
     public void uploadboard(CommunityDTO communityDTO) throws Exception;
 
-    public List<CommunityDTO> readBoard(int post_num) throws Exception;
+    public CommunityDTO readBoard(CommunityDTO communityDTO) throws Exception;
 
 }
