@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="col-md-9">
+     <p>${loginMember.name}님 반갑습니다.</p>
      <table class="community_table" style="width: 500px;">
                 <thead>
                     <tr>

@@ -12,20 +12,11 @@
 </head>
 <body>
         <div class="col-md-9">
-                <table class="community_table" style="width: 500px;">
-                    <thead>
-                        <tr>
-                            <th>제목 : ${readBoard.post_title }</th>
-                        </tr>
-                        <tr>
-                            <td>작성자 : ${readBoard.post_id}</td>
-                        </tr>
-                        <tr>
-                            <td>내용 : ${readBoard.post_content}</td>
-                        </tr>
-                    </thead>
-                </table>
-                <input type="submit" value="글 작성">
+            <form action="${contextPath}/loginMember" method="post">
+                <input type="text" value="ID" id="id" name="id">
+                <input type="password" value="PWD" id="pwd" name="pwd">
+                <input type="submit" value="로그인">
+            </form>
         </div>
 </body>
 </html>

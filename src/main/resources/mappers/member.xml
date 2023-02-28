@@ -3,13 +3,13 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.Dao.CommunityDAO">
+<mapper namespace="com.example.Dao.MemberDAO">
 
-    <select id="listCommunity" resultType="communityDTO">
+    <select id="loginMember" resultType="memberDTO">
         <![CDATA[
 				SELECT *
 				FROM GR_MEMBER
-				WHERE ID = #{id} AND PWD = #{PWD}
+				WHERE ID = #{id} AND PWD = #{pwd}
 			]]>
     </select>
 </mapper>

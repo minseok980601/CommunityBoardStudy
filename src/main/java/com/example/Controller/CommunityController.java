@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -19,6 +20,9 @@ public class CommunityController {
 
     @Autowired
     CommunityDAO communityDAO;
+
+    @Autowired
+    CommunityService communityService;
 
     @GetMapping(value = "/community")
     public String community(Model model, CommunityDTO communityDTO) throws Exception {
@@ -34,9 +38,16 @@ public class CommunityController {
         return "uploadboardpage";
     }
 
+//    @PostMapping(value = "/successuploadboard")
+//    public String successUploadBoard(CommunityDTO communityDTO) throws Exception {
+//        communityDAO.uploadboard(communityDTO);
+//
+//        return "redirect:community";
+//    }
+
     @PostMapping(value = "/successuploadboard")
-    public String successUploadBoard(CommunityDTO communityDTO) throws Exception {
-        communityDAO.uploadboard(communityDTO);
+    public String successUploadBoard(CommunityDTO communityDTO, MultipartFile file) throws Exception {
+        communityService.uploadBoard(communityDTO, file);
 
         return "redirect:community";
     }

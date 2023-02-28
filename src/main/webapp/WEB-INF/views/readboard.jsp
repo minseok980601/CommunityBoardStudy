@@ -23,6 +23,9 @@
                         <tr>
                             <td>내용 : ${readBoard.post_content}</td>
                         </tr>
+                        <tr>
+                            <td><a href="${readBoard.filepath}">다운로드</a></td>
+                        </tr>
                     </thead>
                 </table>
                 <input type="submit" value="글 작성">

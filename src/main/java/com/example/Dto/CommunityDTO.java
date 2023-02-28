@@ -14,4 +14,6 @@ public class CommunityDTO {
     private int post_good;
     private int post_bad;
     private Date post_date;
+    private String filename;
+    private String filepath;
 }

@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="col-md-9">
-        <form action="${contextPath}/successuploadboard?post_id=${loginMember.id}" method="post">
+        <form action="${contextPath}/successuploadboard?post_id=${loginMember.id}" method="post", enctype="multipart/form-data">
             <table class="community_table" style="width: 500px;">
                 <thead>
                     <tr>
@@ -26,6 +26,7 @@
                     </tr>
                 </thead>
             </table>
+            <input type="file" name="file">
             <input type="submit" value="글 작성">
         </form>
     </div>
