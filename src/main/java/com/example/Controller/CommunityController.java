@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import java.util.List;
 
@@ -38,16 +39,21 @@ public class CommunityController {
         return "uploadboardpage";
     }
 
-//    @PostMapping(value = "/successuploadboard")
-//    public String successUploadBoard(CommunityDTO communityDTO) throws Exception {
-//        communityDAO.uploadboard(communityDTO);
-//
-//        return "redirect:community";
-//    }
+    @GetMapping(value ="/fileuploadboard")
+    public String fileUploadboard() throws Exception {
+        return "fileuploadboardpage";
+    }
 
     @PostMapping(value = "/successuploadboard")
-    public String successUploadBoard(CommunityDTO communityDTO, MultipartFile file) throws Exception {
-        communityService.uploadBoard(communityDTO, file);
+    public String successUploadBoard(CommunityDTO communityDTO) throws Exception {
+        communityDAO.uploadboard(communityDTO);
+
+        return "redirect:community";
+    }
+
+    @PostMapping(value = "/successuploadboard2")
+    public String successUploadBoard2(CommunityDTO communityDTO, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
+        communityDAO.fileUploadboard(communityDTO), multipartHttpServletRequest;
 
         return "redirect:community";
     }
