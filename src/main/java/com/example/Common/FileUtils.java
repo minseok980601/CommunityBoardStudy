@@ -1,20 +1,6 @@
 package com.example.Common;
 
-import com.example.Dto.BoardFileDTO;
-import com.example.Exception.AttachFileException;
-import org.apache.commons.io.FilenameUtils;
-import org.springframework.stereotype.Component;
-import org.springframework.util.ObjectUtils;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.time.LocalDate;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
+/*
 
 @Component
 public class FileUtils {
@@ -77,3 +63,4 @@ public class FileUtils {
         return fileList;
     }
 }
+*/

@@ -2,6 +2,7 @@ package com.example.Controller;
 
 import com.example.Dao.CommunityDAO;
 import com.example.Dto.CommunityDTO;
+import com.example.Dto.CommunityTwoDTO;
 import com.example.Service.CommunityService;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,8 +53,8 @@ public class CommunityController {
     }
 
     @PostMapping(value = "/successuploadboard2")
-    public String successUploadBoard2(CommunityDTO communityDTO, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
-        communityDAO.fileUploadboard(communityDTO), multipartHttpServletRequest;
+    public String successUploadBoard2(CommunityTwoDTO communityTwoDTO) throws Exception {
+        communityService.insertBoard(communityTwoDTO);
 
         return "redirect:community";
     }

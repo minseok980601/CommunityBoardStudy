@@ -1,9 +1,8 @@
 package com.example.Dao;
 
-import com.example.Dto.BoardFileDTO;
 import com.example.Dto.CommunityDTO;
+import com.example.Dto.CommunityTwoDTO;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -18,8 +17,8 @@ public interface CommunityDAO {
 
     public void fileUploadboard(CommunityDTO communityDTO) throws Exception;
 
-    public void insertBoardFileList(List<BoardFileDTO> list) throws Exception;
-
     public CommunityDTO readBoard(CommunityDTO communityDTO) throws Exception;
+
+    public void insertBoard(CommunityTwoDTO communityTwoDTO) throws Exception;
 
 }

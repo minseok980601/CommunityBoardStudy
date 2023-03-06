@@ -20,6 +20,13 @@
 			]]>
 	</insert>
 
+	<insert id="insertBoard" parameterType="communityTwoDTO">
+		<![CDATA[
+				INSERT INTO community_board2(BOARD_IDX, TITLE, CONTENTS, CREATOR_ID)
+				VALUES ((SELECT nvl(max(board_idx), 0) + 1 FROM COMMUNITY_BOARD2), #{title}, #{contents}, #{creator_id})
+			]]>
+	</insert>
+
 	<insert id="fileUploadboard" parameterType="communityDTO" useGeneratedKeys="true" keyProperty="post_num">
 		<![CDATA[
 				INSERT INTO community_board(POST_NUM, POST_TITLE, POST_ID, POST_HITS, POST_GOOD, POST_BAD, POST_CONTENT, FILENAME, FILEPATH)
