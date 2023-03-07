@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.Dao.com.example.Dto.CommunityTwoDTO">
+
+    <insert id="insertBoard" parameterType="communityTwoDTO">
+        <![CDATA[
+				INSERT INTO community_board2(BOARD_IDX, TITLE, CONTENTS, CREATOR_ID)
+				VALUES ((SELECT nvl(max(board_idx), 0) + 1 FROM COMMUNITY_BOARD2), #{title}, #{contents}, #{creator_id})
+			]]>
+    </insert>
+
+</mapper>

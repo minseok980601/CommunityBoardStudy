@@ -11,8 +11,6 @@ public interface CommunityDAO {
 
     public List<CommunityDTO> listCommunity(CommunityDTO communityDTO) throws Exception;
 
-    // public void uploadboard(CommunityDTO communityDTO) throws Exception;
-
     public void uploadboard(CommunityDTO communityDTO) throws Exception;
 
     public void fileUploadboard(CommunityDTO communityDTO) throws Exception;

@@ -40,16 +40,16 @@ public class CommunityController {
         return "uploadboardpage";
     }
 
+    @PostMapping(value = "/successuploadboard")
+    public String successUploadBoard(CommunityDTO communityDTO, MultipartFile file) throws Exception {
+        communityService.uploadBoard(communityDTO, file);
+
+        return "redirect:community";
+    }
+
     @GetMapping(value ="/fileuploadboard")
     public String fileUploadboard() throws Exception {
         return "fileuploadboardpage";
-    }
-
-    @PostMapping(value = "/successuploadboard")
-    public String successUploadBoard(CommunityDTO communityDTO) throws Exception {
-        communityDAO.uploadboard(communityDTO);
-
-        return "redirect:community";
     }
 
     @PostMapping(value = "/successuploadboard2")
