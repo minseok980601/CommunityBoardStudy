@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.Dao.TestDAO">
+
+    <insert id="testUpLoad" parameterType="com.example.Dto.TestDTO">
+        <![CDATA[
+				INSERT INTO community_board(POST_NUM, POST_TITLE, POST_ID, POST_HITS, POST_GOOD, POST_BAD, POST_CONTENT, FILENAME, FILEPATH)
+				VALUES ((SELECT nvl(max(post_num), 0) + 1 FROM COMMUNITY_BOARD), #{post_title}, #{post_id}, '0', '0', '0', #{post_content}, #{filename}, #{filepath})
+			]]>
+    </insert>
+
+</mapper>

@@ -40,6 +40,7 @@
                 </tbody>
             </table>
             <input type="button" value="글 작성" onclick="location.href='${contextPath}/uploadboard?post_id=${loginMember.id}'">
+            <input type="button" value="테스트 글 작성" onclick="location.href='${contextPath}/test?post_id=${loginMember.id}'">
             <input type="button" value="파일 업로드 글 작성" onclick="location.href='${contextPath}/fileuploadboard?post_id=${loginMember.id}'">
     </div>
 </body>

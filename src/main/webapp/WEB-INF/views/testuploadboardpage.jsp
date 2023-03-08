@@ -12,17 +12,17 @@
 </head>
 <body>
     <div class="col-md-9">
-        <form action="${contextPath}/successuploadboard?post_id=${loginMember.id}" method="post", enctype="multipart/form-data">
+        <form action="${contextPath}/testupload?post_id=${loginMember.id}" method="post", enctype="multipart/form-data">
             <table class="community_table" style="width: 500px;">
                 <thead>
                     <tr>
                         <th>제목</th>
                     </tr>
                     <tr>
-                        <td><input type="text" id="post_title" name="post_title"></td>
+                        <td><input type="text" name="post_title"></td>
                     </tr>
                     <tr>
-                        <td><textarea rows="10" cols="50" id="post_content" name="post_content"></textarea></td>
+                        <td><textarea rows="10" cols="50" name="post_content"></textarea></td>
                     </tr>
                 </thead>
             </table>

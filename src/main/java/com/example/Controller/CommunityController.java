@@ -3,6 +3,7 @@ package com.example.Controller;
 import com.example.Dao.CommunityDAO;
 import com.example.Dto.CommunityDTO;
 import com.example.Dto.CommunityTwoDTO;
+import com.example.Dto.TestDTO;
 import com.example.Service.CommunityService;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,4 +67,6 @@ public class CommunityController {
 
         return "readboard";
     }
+
+
 }

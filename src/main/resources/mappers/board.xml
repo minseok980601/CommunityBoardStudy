@@ -13,7 +13,7 @@
 			]]>
 	</select>
 
-	<insert id="uploadboard" parameterType="communityDTO">
+	<insert id="uploadBoard" parameterType="communityDTO">
 	<![CDATA[
 				INSERT INTO community_board(POST_NUM, POST_TITLE, POST_ID, POST_HITS, POST_GOOD, POST_BAD, POST_CONTENT, FILENAME, FILEPATH)
 				VALUES ((SELECT nvl(max(post_num), 0) + 1 FROM COMMUNITY_BOARD), #{post_title}, #{post_id}, '0', '0', '0', #{post_content}, #{filename}, #{filepath})

@@ -45,7 +45,7 @@ public class CommunityService {
         // 저장된 파일의 이름, 저장된 파일의 경로
         communityDTO.setFilepath("/files/" + fileName);
 
-        communityDAO.uploadboard(communityDTO);
+        communityDAO.uploadBoard(communityDTO);
     }
 
 /*    public void fileUploadBoard(CommunityDTO communityDTO, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
